@@ -1,9 +1,10 @@
+var parentElement = 'talentPipeline';
 var tabbedInterface = document.createElement('div');
 tabbedInterface.className = 'container mt-4';
 
 var tabbedHeading = document.createElement('p');
-tabbedHeading.textContent = 'Expected Team Metrics with New Hire';
-tabbedInterface.appendChild(tabbedHeading);
+// tabbedHeading.textContent = 'Expected Team Metrics with New Hire';
+// tabbedInterface.appendChild(tabbedHeading);
 
 var tabNav = document.createElement('ul');
 tabNav.className = 'nav nav-tabs';
@@ -88,7 +89,7 @@ tabs.forEach(function (tabInfo, index) {
   tabContent.appendChild(tabPane);
 });
 
-var elementWithGlobalPageTitle = document.getElementById('QUICK_ACTIONS-sectionLabel');
+var elementWithGlobalPageTitle = document.getElementById(parentElement);
 
 if (elementWithGlobalPageTitle) {
   elementWithGlobalPageTitle.parentNode.insertBefore(tabbedInterface, elementWithGlobalPageTitle);
@@ -139,7 +140,7 @@ document.head.appendChild(customCss);
 var splitLayoutContainer = document.createElement('div');
 splitLayoutContainer.className = 'container mt-4';
 
-var elementWithGlobalPageTitleRight = document.getElementById('QUICK_ACTIONS-sectionLabel');
+var elementWithGlobalPageTitleRight = document.getElementById(parentElement);
 
 if (elementWithGlobalPageTitleRight) {
   elementWithGlobalPageTitleRight.parentNode.insertBefore(splitLayoutContainer, elementWithGlobalPageTitleRight);
